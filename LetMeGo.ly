@@ -472,7 +472,15 @@ pupper = \relative c' {
   e c a g e c \ottava #0 e, c g c, a g
   }
   a''2 c d e
-  g,,16_"rit. "\mp a b c a b c d b c d e c d e f
+  \tempo 4 = 112
+  g,,16_"rit. "\mp a b c
+  \tempo 4 = 100
+  a b c d
+  \tempo 4 = 86
+  b c d e
+  \tempo 4 = 72
+  c d e f
+  \tempo 4 = 80
   g4 < g, b ees> < g b d> < g bes des>
 
 
