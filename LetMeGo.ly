@@ -38,7 +38,6 @@ offsetPositions =
 
 melodya = \relative c'' {
   \clef treble \key c \major \time 4/4 \tempo 4 = 80
-\set midiInstrument = #"pan flute"
 
   %\mark \default %A
   r4 g\f^"Freely" g g g f8 f4 e8 d f
@@ -148,7 +147,6 @@ melodya = \relative c'' {
 
 melodyb = \relative c'' {
   \clef treble \key c \major \time 4/4 \tempo 4 = 80
-\set midiInstrument = #"flute"
 
   \mark \default %A
 %  r4 g\f g g g f8 f4 e8 d f
@@ -1022,42 +1020,45 @@ sdynamics = {
 %    \override NonMusicalPaperColumn #'page-break-permission = ##f
   }
   \new StaffGroup <<
-    \new Voice = "melodya" \melodya <<
-%      \set Staff.instrumentName = #"Voice  "
-%      \set Staff.midiInstrument = #"pan flute"
-% \set Staff.fontSize = #-2
-% \override StaffSymbol #'staff-space = #(magstep -3)
-
+    \new Staff = "melodyastaff" <<
+      % \set Staff.midiInstrument = #"recorder"
+      \set Staff.midiInstrument = #"electric guitar (clean)"
+      \set Staff.midiMinimumVolume = #0.9
+      \set Staff.midiMaximumVolume = #1
+      \new Voice = "melodya" \melodya
+      \context Lyrics = "sopranolyrics" { \lyricsto "melodya" { \lyricsa } }
     >>
-    \context Lyrics = "sopranolyrics" { \lyricsto "melodya" { \lyricsa } }
-    \new Voice = "melodyb" \melodyb <<
-%      \set Staff.instrumentName = #"Voice  "
-%      \set Staff.midiInstrument = #"recorder"
+    \new Staff = "melodybstaff" <<
+      % \set Staff.midiInstrument = #"recorder"
+      \set Staff.midiInstrument = #"electric guitar (clean)"
+      \set Staff.midiMinimumVolume = #0.9
+      \set Staff.midiMaximumVolume = #1
+      \new Voice = "melodyb" \melodyb
+      \context Lyrics = "tenorlyrics" { \lyricsto "melodyb" { \lyricsb } }
     >>
-    \context Lyrics = "tenorlyrics" { \lyricsto "melodyb" { \lyricsb } }
 
     \new PianoStaff <<
       \set PianoStaff.instrumentName = #"Primo  "
       \new Staff = "pupper" \pupper {
-        \set Staff.midiMinimumVolume = #0.4
-        \set Staff.midiMaximumVolume = #0.6
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
       }
       \new Dynamics = "pdynamics" \pdynamics
       \new Staff = "plower" \plower {
-        \set Staff.midiMinimumVolume = #0.4
-        \set Staff.midiMaximumVolume = #0.6
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
       }
     >>
     \new PianoStaff <<
       \set PianoStaff.instrumentName = #"Secondo  "
       \new Staff = "supper" \supper {
-        \set Staff.midiMinimumVolume = #0.4
-        \set Staff.midiMaximumVolume = #0.6
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
       }
       \new Dynamics = "sdynamics" \sdynamics
       \new Staff = "slower" \slower {
-        \set Staff.midiMinimumVolume = #0.4
-        \set Staff.midiMaximumVolume = #0.6
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
       }
     >>
   >>
