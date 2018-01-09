@@ -31,8 +31,8 @@ shapeSlur =
 offsetPositions =
   #(define-music-function (parser location offsets) (pair?)
     #{
-       \once \override Slur #'positions = #(lambda (grob) 
-   `(,(+ (car $offsets) (cdar (ly:slur::calc-control-points grob))) . 
+       \once \override Slur #'positions = #(lambda (grob)
+   `(,(+ (car $offsets) (cdar (ly:slur::calc-control-points grob))) .
      ,(+ (cdr $offsets) (cdr (cadddr (ly:slur::calc-control-points grob))))))
     #})
 
@@ -126,7 +126,7 @@ melodya = \relative c'' {
   c' c b4 c d e r8 c \times 2/3 {g8( f) ees} r8 c' c f, r f16 e fis8 g4 a8 b4. g8~
   g2
   }
-  
+
   %\mark \default %P
   \tempo 4 = 120
   R1
@@ -207,7 +207,7 @@ melodyb = \relative c'' {
   \mark \default %H
     R1 R1 R1 R1
     \tripletFeel 8 { R1 r2 r4 r8 g g4. aes8 f4 d8 e~ e2 r2 }
-  
+
 
   \mark \default %J
   \tripletFeel 8 {
@@ -276,88 +276,68 @@ melodyb = \relative c'' {
 }
 
 lyricsa = \lyricmode {
-å¤© ç å¾ åª æ ä½  ä»¤ ç¥ ä» é­ æ­¸ å¤© è¦ æª èª°
-
-é£ æ å¶ å¯¦ å ç¡ ç æ­£ èª ç± ä½ å æ å° æ² è¶£
-
-å¾ ä½ æ ä½  ä¹ å­¸ æ ä¸ è¦ é¢ ç¾¤ å¾ ä½ æ ç¼ è¦º æ² æ å ä¼´ ä¸ è¡
-å¾ ä½ æ æ æ è´ è¶ å° æ¼ é£ æ¡ æº é£ å¤ é  æ èª° æ å° ç  æ å¿
-
-å¯ ä»¥ è è³ æ¼ åº· è æ é ç¶ å¾ å æ² æµ´ æº« æ³
-
-å¥½ å» è
-æ¢ ç¶ æ²¿ è å° å¤¢ ä¹ æ åº ç¼
-
-é å¤  å¹¾ å ç¡ æ¿ å° é æ å  ä»¿ ä¼¼ ä¸ è·¯ é£ å¥ ä¸ å« å æ­²
-æ¢ ç¶ æ²¿ è æ è·¯ èµ° å° é è£¡ ç¡ é ä¸ è¦ å¾ é
-
-å¾ ä½ æ ä½  ä¹ å­¸ æ ä¸ è¦ é¢ ç¾¤ å¾ ä½ æ ç¼ è¦º æ² æ å ä¼´ ä¸ è¡
-å¾ ä½ æ æ æ è´ è¶ å° æ¼ é£ æ¡ æº é£ å¤ é  æ èª° æ å° ç  æ å¿
-
-æ»¿ è¡ è¶ è·¯ äºº
-å¯ ä»¥ è è³ æ¼ åº· è æ é ç¶ å¾ å æ² æµ´ æº« æ³
-çº ä½ å¨ é¨ å å¤ ç¨ è¡
-
-è¦ª æ ç ç­ é æ æ ç¶  ç é æ¯ è® èª å·± ç ä¸ ä¸ è¦ ç·
-é¦¬ è·¯ æ² é¢ å åº å¤© ç©º æµ· é ä»» ä½  è¡
-
-å¾ ä½ æ é å§ å¿ è«± ç©º å±± ç¡ äºº å¾ ä½ æ é å§ æ é æ æ å¡µ
-å ä¾ ç¥ ä» é­ æ©« æ¸¡ å¤§ æµ· æ æ· é­ è½ ä¸ å° ä¸ äºº æ è½ ç ç¦ é³
-
-æ»¿ è¡ è¶ è·¯ äºº
-å¯ ä»¥ è è³ æ¼ åº· è æ é ç¶ å¾ å æ² æµ´ æº« æ³
-çº ä½ å¨ èµ¤ å° ä¸ ç¨ è¡
-
-å¯ ä»¥ ä»» æ èµ° æ éº¼ å° é ­ ä¾ å é¨ è å¤§ é èµ°
-äºº ç¾¤ æ¯ é£ éº¼ å ç¾ ç¾¤
+  天 真 得 只 有 你 令 神 仙 魚 歸 天 要 怪 誰
+  那 時 其 實 嚐 盡 真 正 自 由 但 又 感 到 沒 趣
+  從 何 時 你 也 學 會 不 要 離 群 從 何 時 發 覺 沒 有 同 伴 不 行
+  從 何 時 惋 惜 蝴 蝶 困 於 那 桃 源 飛 多 遠 有 誰 會 對 牠 操 心
+  可 以 聚 腳 於 康 莊 旅 途 然 後 同 沐 浴 溫 泉
+  好 去 處
+  既 然 沿 著 尋 夢 之 旅 出 發
+  逛 夠 幾 個 睡 房 到 達 教 堂 仿 似 一 路 飛 奔 七 八 十 歲
+  既 然 沿 著 情 路 走 到 這 裡 盡 量 不 要 後 退
+  從 何 時 你 也 學 會 不 要 離 群 從 何 時 發 覺 沒 有 同 伴 不 行
+  從 何 時 惋 惜 蝴 蝶 困 於 那 桃 源 飛 多 遠 有 誰 會 對 牠 操 心
+  滿 街 趕 路 人
+  可 以 聚 腳 於 康 莊 旅 途 然 後 同 沐 浴 溫 泉
+  為 何 在 雨 傘 外 獨 行
+  親 愛 的 等 遍 所 有 綠 燈 還 是 讓 自 己 瘋 一 下 要 緊
+  馬 路 戲 院 商 店 天 空 海 闊 任 你 行
+  從 何 時 開 始 忌 諱 空 山 無 人 從 何 時 開 始 怕 遙 望 星 塵
+  原 來 神 仙 魚 橫 渡 大 海 會 斷 魂 聽 不 到 世 人 愛 聽 的 福 音
+  滿 街 趕 路 人
+  可 以 聚 腳 於 康 莊 旅 途 然 後 同 沐 浴 溫 泉
+  為 何 在 赤 地 上 獨 行
+  可 以 任 我 走 怎 麼 到 頭 來 又 隨 著 大 隊 走
+  人 群 是 那 麼 像 羊 群
 }
 
 lyricsb = \lyricmode {
-ä»¥ çº ç å¨ å å° ä¸ å¤  é¨ é å°± è® ç  æ² ç è£¡ æ² æ°´ 
-
-é£ æ¬¡ å¾ ä½  å éª å å¤ ä¸ å±± ç­ æ ä¸­ é å ä¸ æ³ æ ä¸ å»
-
-ä¸ è¦ ç· å±± é é½ æ é§ ç é  ç«¥ äº¦ å­¸ ä¹ ä¸ æ¢ å¤ª å æ¢
-ä¸ ä¸ æ å¤ å° å ç¹½ ç´ æ¨ å ä»» ä½  è¡
-
-ä¸ è¦ é¢ ç¾¤ æ² æ å ä¼´ ä¸ è¡
-
-æ¾ è¿· é æ æ è¿½ ä¸ ä¸ æ»¿ è¡ è¶ è·¯ äºº ç¡ äºº ç ç¬ å¦ ä½ æ± ç
-é  ç«¥ å¤§ äº æ² é£ éº¼ ç¬¨ å¯ ä»¥ è è³ æ¼ åº· è æ é ç¶ å¾ å æ² æµ´ æº« æ³
-çº ä½ å¨ é¨ å å¤ ç¨ è¡
-
-é éº¼ å¤ å¥½ å» è æ¼« é å° ç¨ å®¶ æ å» æ¢ èª°
-æ¢ ç¶ æ²¿ è å° å¤¢ ä¹ æ åº ç¼ å°± ç« åº é» å¸ å¼ è® è¨±
-
-ç¡ é ä¸ è¦ å¾ é
-
-è¦ª æ ç é é æ æ è·¯ ç é æ¯ ä»¤ å¤§ å®¶ é å¿ è¦ ç·
-æ± ä½ å© å»³ é å¥ å¤© ç©º æµ· é ä»» ä½  è¡
-
-ä¸ è¦ é¢ ç¾¤ æ² æ å ä¼´ ä¸ è¡
-é£ å¤ é 
-
-æ¾ è¿· é æ æ è¿½ ä¸ ä¸ æ»¿ è¡ è¶ è·¯ äºº ç¡ äºº ç ç¬ å¦ ä½ æ± ç
-é  ç«¥ å¤§ äº æ² é£ éº¼ ç¬¨ å¯ ä»¥ è è³ æ¼ åº· è æ é ç¶ å¾ å æ² æµ´ æº« æ³
-çº ä½ å¨ é¨ å å¤ ç¨ è¡
-
-woo \skip 1 \skip 1 \skip 1 \skip 1  è¦ ç·
-woo \skip 1 å¤© ç©º æµ· é ä»» ä½  è¡
-
-å¾ ä½ æ é å§ å¿ è«± ç©º å±± ç¡ äºº å¾ ä½ æ é å§ æ é æ æ å¡µ
-å ä¾ ç¥ ä» é­ æ©« æ¸¡ å¤§ æµ· æ æ· é­ è½ ä¸ å° ä¸ äºº æ è½ ç ç¦ é³
-
-æ¾ è¿· é æ æ è¿½ ä¸ ä¸ æ»¿ è¡ è¶ è·¯ äºº ç¡ äºº ç ç¬ å¦ ä½ æ± ç
-é  ç«¥ å¤§ äº æ² é£ éº¼ ç¬¨ å¯ ä»¥ è è³ æ¼ åº· è æ é ç¶ å¾ å æ² æµ´ æº« æ³
-çº ä½ å¨ èµ¤ å° ä¸ ç¨ è¡
-
-é  ç«¥ å¤§ äº å¥ å è¿½ å
-äºº ç¾¤ æ¯ é£ éº¼ å ç¾ ç¾¤
+  以 為 留 在 原 地 不 夠 遨 遊 就 讓 牠 沙 灘 裡 戲 水
+  那 次 得 你 冒 險 半 夜 上 山 爭 拗 中 隊 友 不 想 撐 下 去
+  不 要 緊 山 野 都 有 霧 燈 頑 童 亦 學 乖 不 敢 太 勇 敢
+  世 上 有 多 少 個 繽 紛 樂 園 任 你 行
+  不 要 離 群
+  沒 有 同 伴 不 行
+  曾 迷 途 才 怕 追 不 上 滿 街 趕 路 人 無 人 理 睬 如 何 求 生
+  頑 童 大 了 沒 那 麼 笨 可 以 聚 腳 於 康 莊 旅 途 然 後 同 沐 浴 溫 泉
+  為 何 在 雨 傘 外 獨 行
+  這 麼 多 好 去 處 漫 遊 到 獨 家 村 去 探 誰
+  既 然 沿 著 尋 夢 之 旅 出 發   就 站 出 點 吸 引 讚 許
+  盡 量 不 要 後 退
+  親 愛 的 闖 遍 所 有 路 燈 還 是 令 大 家 開 心 要 緊
+  抱 住 兩 廳 雙 套 天 空 海 闊 任 你 行
+  不 要 離 群
+  沒 有 同 伴 不 行
+  飛 多 遠
+  曾 迷 途 才 怕 追 不 上 滿 街 趕 路 人 無 人 理 睬 如 何 求 生
+  頑 童 大 了 沒 那 麼 笨 可 以 聚 腳 於 康 莊 旅 途 然 後 同 沐 浴 溫 泉
+  為 何 在 雨 傘 外 獨 行
+  woo - - - -
+  要 緊
+  woo -
+  天 空 海 闊 任 你 行
+  從 何 時 開 始 忌 諱 空 山 無 人 從 何 時 開 始 怕 遙 望 星 塵
+  原 來 神 仙 魚 橫 渡 大 海 會 斷 魂 聽 不 到 世 人 愛 聽 的 福 音
+  曾 迷 途 才 怕 追 不 上 滿 街 趕 路 人 無 人 理 睬 如 何 求 生
+  頑 童 大 了 沒 那 麼 笨 可 以 聚 腳 於 康 莊 旅 途 然 後 同 沐 浴 溫 泉
+  為 何 在 赤 地 上 獨 行
+  頑 童 大 了 別 再 追 問
+  人 群 是 那 麼 像 羊 群
 }
 
 pupper = \relative c' {
   \clef treble \key c \major \time 4/4
-  
+
   \override Script #'padding = #2
   \mark \default %A
   \ottava #1
@@ -369,7 +349,7 @@ pupper = \relative c' {
   <c e a e' g b e>\arpeggio
   <c f a e' g a e'>\arpeggio
   <d f a e' g bes des e>2~\arpeggio <d f a e' g b d>
-  
+
   \mark \default %B
   R1 %<c g' b e>2
   R1 %<f c' e a>2
@@ -403,7 +383,7 @@ pupper = \relative c' {
     r2 c'8 b a gis
     g4. ees8 d c aes g
     r4 f'8 c' r4 fis,8 c'
-    r4. ees8 \times 2/3 {d b g bes a f}   
+    r4. ees8 \times 2/3 {d b g bes a f}
   }
 
   \mark \default %E
@@ -454,7 +434,7 @@ pupper = \relative c' {
   \mark \default %K
   \ottava #1
   \tripletFeel 8 { e'8 f e f \times 2/3 {fis g e'~} e8 < gis, b >8
-  < a c > r r4 r8 \times 2/3 {b16 c cis} d8 < b dis > 
+  < a c > r r4 r8 \times 2/3 {b16 c cis} d8 < b dis >
   < c e >4 g,8 aes b c~ \times 2/3 {c d e}
   g4 \times 2/3 {fis8 g a} b8 c~ \times 2/3 { c b c }
   a4. < aes, a'>8~ < aes a'> \times 2/3 { g16 aes c } g'8 f
@@ -464,11 +444,11 @@ pupper = \relative c' {
 
   \mark \default %L
   \tripletFeel 8 {
-    b8 c dis e \times 2/3 {g aes b~} b8 c16 cis 
+    b8 c dis e \times 2/3 {g aes b~} b8 c16 cis
     d4 r g,8 fis-> g f->
     e8 < bes c f >~ < bes c f > g'~ \times 2/3 { g gis a c d dis}
     e4. ees32 b g f e2
-    gis8 a gis a~ a < c, b' >4. 
+    gis8 a gis a~ a < c, b' >4.
     \times 2/3 {b'8 c d a c d} gis,8 < f gis d' >4.~
     \times 2/3 {< f gis d' >8  c' d } \acciaccatura dis16 e8 g~ g4 \times 2/3 {g8 fis f~} f8 < f, aes d >4.~ < f aes d >2
   }
@@ -525,11 +505,11 @@ pupper = \relative c' {
   R1
   \ottava #1
   \tripletFeel 8 {
-    b,8 c dis e \times 2/3 {g aes b~} b8 c16 cis 
+    b,8 c dis e \times 2/3 {g aes b~} b8 c16 cis
     d4 r g,8 fis-> g f->
     e8 < bes c f >~ < bes c f > g'~ \times 2/3 { g gis a c d dis}
     e4. ees32 b g f e2
-    gis8 a gis a~ a < c, b' >4. 
+    gis8 a gis a~ a < c, b' >4.
     \times 2/3 {b'8 c d a c d} gis,8 < f gis d' >4.~
     \times 2/3 {< f gis d' >8  c' d } \acciaccatura dis16 e8 g~ g4 \times 2/3 {g8 fis f~} f8 < f, aes d >4.~ < f aes d >2
   }
@@ -610,7 +590,7 @@ plower = \relative c' {
 
   \mark \default %K
   \tripletFeel 8 { e8 f e f \times 2/3 {fis g e'~} e8 < gis, b >8
-  < a c > r r4 r8 \times 2/3 {b16 c cis} d8 < b dis > 
+  < a c > r r4 r8 \times 2/3 {b16 c cis} d8 < b dis >
   < c e >4 g,8 aes b c~ \times 2/3 {c d e}
   g4 \times 2/3 {fis8 g a} b8 c~ \times 2/3 { c b c }
   a4. < aes, a'>8~ < aes a'> \times 2/3 { g16 aes c } g'8 f
@@ -620,11 +600,11 @@ plower = \relative c' {
 
   \mark \default %L
   \tripletFeel 8 {
-    b8 c dis e \times 2/3 {g aes b~} b8 c16 cis 
+    b8 c dis e \times 2/3 {g aes b~} b8 c16 cis
     d4 r g,8 fis-> g f->
     e8 < bes c f >~ < bes c f > g'~ \times 2/3 { g gis a c d dis}
     e4. ees32 b g f e2
-    gis8 a gis a~ a < c, b' >4. 
+    gis8 a gis a~ a < c, b' >4.
     \times 2/3 {b'8 c d a c d} gis,8 < f gis d' >4.~
     \times 2/3 {< f gis d' >8  c' d } \acciaccatura dis16 e8 g~ g4 \times 2/3 {g8 fis f~} f8 < f, aes d >4.~ < f aes d >2
   }
@@ -662,11 +642,11 @@ plower = \relative c' {
   \mark \default %P
   R1
   \tripletFeel 8 {
-    b8 c dis e \times 2/3 {g aes b~} b8 c16 cis 
+    b8 c dis e \times 2/3 {g aes b~} b8 c16 cis
     d4 r g,8 fis-> g f->
     e8 < bes c f >~ < bes c f > g'~ \times 2/3 { g gis a c d dis}
     e4. ees32 b g f e2
-    gis8 a gis a~ a < c, b' >4. 
+    gis8 a gis a~ a < c, b' >4.
     \times 2/3 {b'8 c d a c d} gis,8 < f gis d' >4.~
     \times 2/3 {< f gis d' >8  c' d } \acciaccatura dis16 e8 g~ g4 \times 2/3 {g8 fis f~} f8 < f, aes d >4.~ < f aes d >2
   }
@@ -677,7 +657,7 @@ plower = \relative c' {
   \clef bass
   f,,1 e2 a d1 g,1
   R1 \clef treble \tripletFeel 8 { c'8 bes aes ges r e d des} c r r4 r2
-  
+
   \bar "|."
 
 }
@@ -703,14 +683,14 @@ supper = \relative c' {
   }
 
   %\mark \default %C
-  
+
   \tripletFeel 8 {
   r8 e4.~ e2
   r8 b d < bes des g >~ < bes des g >2
   r8 f c' < aes c >~ < aes c>4 g
   r8 c < e b' >4 r8 < c g' >4.
   }
-  
+
   \times 2/3 {r8 f, c' f4 a8} r2
   \times 2/3 {r8 e, c' e4 g8} r2
   \tripletFeel 8 {r8 < c, e a > r < c a'> r < c d f a>4.
@@ -768,14 +748,14 @@ supper = \relative c' {
   }
 
   %\mark \default %J
-  
+
   \tripletFeel 8 {
   r8 e4.~ e2
   r8 b d < bes des g >~ < bes des g >2
   r8 f c' < aes c >~ < aes c>4 g
   r8 c < e b' >4 r8 < c g' >4.
   }
-  
+
   \times 2/3 {r8 f, c' f4 a8} r2
   \times 2/3 {r8 e, c' e4 g8} r2
   \tripletFeel 8 {r8 < c, e a > r < c a'> r < c d f a>4.
@@ -814,7 +794,7 @@ supper = \relative c' {
     r8 \acciaccatura dis,8 e f g < f a>4~ < f aes>
     g1 R1
   }
-    
+
 %    g,16 a b c a b c d b c d e c d e f
 %    g4 < g, b ees> < g b d> < g bes des>
 %  \clef bass
@@ -838,7 +818,7 @@ supper = \relative c' {
   r8 f c' < aes c >~ < aes c>4 g
   r8 c < e b' >4 r8 < c g' >4.
   }
-  
+
   \times 2/3 {r8 f, c' f4 a8} r2
   \times 2/3 {r8 e, c' e4 g8} r2
   \tripletFeel 8 {r8 < c, d f a > r < c a'> r < c d f a>4.
@@ -946,7 +926,7 @@ slower = \relative c' {
   g4 gis a b
   }
   %\mark \default %L
-  \tripletFeel 8 {c4 d e f g d b g bes f' e d8 gis, a4 c, d e 
+  \tripletFeel 8 {c4 d e f g d b g bes f' e d8 gis, a4 c, d e
   f f fis8 fis4. g4 g gis gis8 a~ a4 bes b \times 2/3 {c8 cis d~} d < g, g'>~ < g g'>2.
   }
 
@@ -989,7 +969,7 @@ slower = \relative c' {
 
   %\mark \default %P
   g'4\glissando g, a b
-  \tripletFeel 8 {c4 d e f g d b g bes f' e d8 gis, a4 \ottava #-1 c, d e 
+  \tripletFeel 8 {c4 d e f g d b g bes f' e d8 gis, a4 \ottava #-1 c, d e
   f f fis8 fis4. g4 g gis gis8 a~ a4 bes b \times 2/3 {c8 cis d~} d < g, g'>~ <g g'>2.
   }
 
@@ -1024,7 +1004,7 @@ sdynamics = {
 }
 
 \header {
-  title = \markup \center-align { "ä»»æè¡" }
+  title = \markup \center-align { "任我行" }
   subtitle = "for JIBA Double Duo"
   arranger = \markup { "Arrangement by Benson" }
 }
