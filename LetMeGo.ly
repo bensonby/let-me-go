@@ -71,7 +71,7 @@ melodya = \relative c'' {
   g c, c a c d e ees~ ees d r4 r2
   %\mark \default %E
   R1 R1 R1 R1
-  r2 r4 c'8 b~ b g b c c b a c, c d~ \times 2/3 {d e f} g4 c8 g~
+  r2 r4 c'8 b~ b g b c c b a c, c d~ d e f g c g~
   g8 r8 r4 r2
   }
 
@@ -82,7 +82,7 @@ melodya = \relative c'' {
     R1 c8 aes4 aes8~ aes r r4 R1 R1
     r4 b,8 g b d fis g c4 aes8 g~ g e4 r8 R1 R1
   %\mark \default %H
-    r4 g8 g b g e g f e f a~ a g f g e4 f8 e8~ e4. c8 f, e f2.
+    r4 g8 g b g e g f e f a~ a g f g e4 f e4. c8 f, e f2.
     r4 g8 e g b d e g4 f8 ees~( ees d) c8 e8 e4. f8 c4 b8 c~ c2 r2
   }
 
@@ -103,7 +103,7 @@ melodya = \relative c'' {
 
   %\mark \default %L
   r2 r4 gis8 a~ a8 f e d r2 R1 R1 % e changed to ees?
-  r2 r4 c'8 b~ b g b c c b a c, c d~ \times 2/3 {d e f} g4 c8 g~
+  r2 r4 c'8 b~ b g b c c b a c, c d~ d e f g c g~
   g8 d d e f e d d~ d c4. r2
   }
 
@@ -132,7 +132,7 @@ melodya = \relative c'' {
   R1
   \tripletFeel 8 {
   r2 r4 gis8 a~ a8 f ees d r2 R1 R1 % e change to ees?
-  r2 r4 c'8 b~ b g b c c b a c, c d~ \times 2/3 {d e f} g4 c8 g~
+  r2 r4 c'8 b~ b g b c c b a c, c d~ d e f g c g~
   g8 d d e f e d d~ d c4. r2
   }
 
@@ -189,7 +189,7 @@ melodyb = \relative c'' {
   d d c d~ d e4 d8~
   d b( a) g r g g c
   d4 r8 c e g4 d'8(~ d c4.) r8 a a b
-  c b c d b4 a8 g~ g e g a e d c g a b~ \times 2/3 {b c d} e4 g8 d~
+  c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
   d d d e f e d d~
   \mark \default %F
   d c4. r2
@@ -200,7 +200,7 @@ melodyb = \relative c'' {
   \mark \default %G
   \tripletFeel 8 {
     r4 r8 g' g g~ g4  g8 f4 f8~ f e8 d f
-    e4 f8 e~ e4. c8 c4. f,8~ f4 r4
+    e4 f e4. c8 c4. f,8~ f4 r4
     r4 g8 e g b d e g4 f8 e~ e c4 e8
     e8 f4 d8~ d d c c~ c d4.~ d4 r
   }
@@ -233,7 +233,7 @@ melodyb = \relative c'' {
   d d c4 d8 e4.
   d8 b( a) g r g g c
   d4 r8 c e g4 d'8(~ d c4.) r8 a a b
-  c b c d b4 a8 g~ g e g a e d c g a b~ \times 2/3 {b c d} e4 g8 d~
+  c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
   d d d e f e d d~
   \mark \default %M
   d c4. r2
@@ -261,7 +261,7 @@ melodyb = \relative c'' {
   r4 r8 g, g g g c8 d d c4 d8 e4.
   d8 b( a) g r g g c
   d4 r8 c e g4 d'8(~ d c4.) r8 a a b
-  c b c d b4 a8 g~ g e g a e d c g a b~ \times 2/3 {b c d} e4 g8 d~
+  c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
   d d d e f e d d~
   \mark \default %Q
   d c4. r2
