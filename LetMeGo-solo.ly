@@ -141,16 +141,18 @@ melody = \relative c'' {
   }
 
   \mark \default %P
+  \tempo 4 = 120
   \tripletFeel 8 {
   r4 r8 g, g g g c8 d d c4 d8 e4.
   d8 b( a) g r g g c
   d4 r8 c e g4 d'8(~ d c4.) r8 a a b
   c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
   d d d e f e d d~
-  \mark \default %Q
   d c4. r2
   }
 
+  \mark \default %Q
+  \tempo 4 = 90
   r2 r8 a' a b c b c d b4
   a8 g~ g e g a e d c g a b c d e4 b' a8( g~) g2.
   \tempo 4 = 120
