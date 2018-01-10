@@ -70,8 +70,8 @@ melody = \relative c'' {
   }
   \mark \default %E
   \tripletFeel 8 {
-  d d c d~ d e4 d8~
-  d b( a) g r g g c
+  d d c4 d8 e4.
+  d8 b( a) g r g g c
   d4 r8 c e g4 d'8(~ d c4.) r8 a a b
   c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
   d d d e f e d d~
