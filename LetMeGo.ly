@@ -1,3 +1,4 @@
+\version "2.18.2"
 #(load "swing.scm")
 #(set-global-staff-size 13)
 %add phrasing
@@ -40,7 +41,7 @@ melodya = \relative c'' {
   \clef treble \key c \major \time 4/4 \tempo 4 = 80
 
   %\mark \default %A
-  r4 g\f^"Freely" g g g f8 f4 e8 d f
+  r4 g^"Freely" g g g f8 f4 e8 d f
   e4 f8 e~ e4 c8 c~ c f,4. r2
   %r4 g8 e g b d e g4 f8 e~ e c4 e8
   %e4 f8 d~ d d c c~ c d4.~ d4 r
@@ -152,7 +153,7 @@ melodyb = \relative c'' {
 %  r4 g\f g g g f8 f4 e8 d f
 %  e4 f8 e~ e4 c8 c~ c f,4. r2
   R1 R1 R1 R1
-  r4 g,8\f^"Freely" e g b d e g4 f8 e~ e c4 e8
+  r4 g,8^"Freely" e g b d e g4 f8 e~ e c4 e8
   e4 f8 d~ d d c c~ c d4.~ d4 r
 
   \mark \default %B
@@ -1010,8 +1011,8 @@ sdynamics = {
 }
 
 \header {
-  title = \markup \center-align { "任我行" }
-  subtitle = "for JIBA Double Duo"
+  title = \markup \center-align { "任我行 - swing version" }
+  subtitle = "for piano four hands and vocal duet"
   arranger = \markup { "Arrangement by Benson" }
 }
 
@@ -1070,10 +1071,8 @@ sdynamics = {
       \consists "Output_property_engraver"
 %      \consists "Piano_pedal_engraver"
       \consists "Script_engraver"
-      \consists "New_dynamic_engraver"
       \consists "Dynamic_align_engraver"
       \consists "Text_engraver"
-      \consists "Skip_event_swallow_translator"
       \consists "Axis_group_engraver"
 
       \override DynamicLineSpanner #'Y-offset = #0
