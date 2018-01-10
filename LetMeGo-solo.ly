@@ -55,7 +55,7 @@ melody = \relative c'' {
 
   \mark \default %C
   \tripletFeel 8 {
-  r4 a'8 gis a4 g8 f g f e g~ g c, d e e f r d~ d d c d~ d e4. r2
+  r4 a'8 gis a4 g8 f g f e g~ g c, d e e f r d~ d d c4 d8 e8~ e4 r2
   r8 f e f~ f aes g f g g r e~( e d) c e~ e f d2. r2 r8 g, g g
   }
 
