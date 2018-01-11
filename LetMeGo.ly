@@ -41,8 +41,8 @@ melodya = \relative c'' {
   \clef treble \key c \major \time 4/4 \tempo 4 = 80
 
   %\mark \default %A
-  r4 g^"Freely" g g g f8 f4 e8 d f
-  e4 f8 e~ e4 c8 c~ c f,4. r2
+  r4 g^"Freely"\( g g g f8 f~ f\) e\( d f
+  e4 f8 e~ e4 c8 c~ c f,4.\) r2
   %r4 g8 e g b d e g4 f8 e~ e c4 e8
   %e4 f8 d~ d d c c~ c d4.~ d4 r
   R1 R1 R1 R1
@@ -52,54 +52,54 @@ melodya = \relative c'' {
   \tripletFeel 8 {
   %r4 g8 \mark "Swing feel" g b g e g f e f a~ a g f g e4 f2 e8 c f, e f2.
   R1 R1 R1 R1
-  r4 g8^"Swing" e g b d e g4 f8 e~ e c4 e8 e f4 c8~ c4 b8 c~ c2 r2
+  r4 g8^"Swing"\( e g b d e g4 f8 e~ e c4\) e8\( e f4 c8~ c4 b8 c~ c2\) r2
   }
 
   %\mark \default %C
   \tripletFeel 8 {
 %  r4 a'8 g a4 g8 f g f e g~ g c, d e e f r d~ d d c d~ d e4. r2
 %  r8 f e f~ f aes g f g g r e~( e d) c e~ e f d2. r2 r8 g, g g
-   R1 R1 R1 R1 R1 R1 R1 r2 r8 g g g
+   R1 R1 R1 R1 R1 R1 R1 r2 r8 g\( g g
   }
 
   %\mark \default %D
   \tripletFeel 8 {
-  c8 c b c~ c4. d8 c g4 g8~ g g g g
+  c8 c b c~ c4. d8 c g4 g8~ g\) g\( g g
   c c b c d e4 g8~
-  g c,4. r8 c c c
-  a' a g a~ a4 b8 c g ees( d) c~ c4 g'8 g~
-  g c, c a c d e ees~ ees d r4 r2
+  g c,4.\) r8 c\( c c
+  a' a g a~ a4 b8 c g ees( d) c~ c4\) g'8\( g~
+  g c, c a c d e ees~ ees d\) r4 r2
   %\mark \default %E
   R1 R1 R1 R1
-  r2 r4 c'8 b~ b g b c c b a c, c d~ d e f g c g~
-  g8 r8 r4 r2
+  r2 r4 c'8\( b~ b g b c c b a c, c d~ d\) e\( f g c g~
+  g8\) r8 r4 r2
   }
 
   \tripletFeel 8 {
   %\mark \default %F
     R1 R1 R1 R1
   %\mark \default %G
-    R1 c8 aes4 aes8~ aes r r4 R1 R1
-    r4 b,8 g b d fis g c4 aes8 g~ g e4 r8 R1 R1
+    R1 c8\( aes4 aes8~ aes\) r r4 R1 R1
+    r4 b,8\( g b d fis g c4 aes8 g~ g e4\) r8 R1 R1
   %\mark \default %H
-    r4 g8 g b g e g f e f a~ a g f g e4 f e4. c8 f, e f2.
-    r4 g8 e g b d e g4 f8 ees~( ees d) c8 e8 e4. f8 c4 b8 c~ c2 r2
+    r4 g8\( g b g e g f e f a~ a\) g\( f g e4 f e4. c8 f, e f2.\)
+    r4 g8\( e g b d e g4 f8 ees~( ees d) c8\) e8\( e4. f8 c4 b8 c~ c2\) r2
   }
 
   %\mark \default %J
   \tripletFeel 8 {
 %  r4 a'8 g a4 g8 f g f e g~ g c, d e e f r d~ d d c d~ d e4. r2
 %  r8 f e f~ f aes g f g g r e~( e d) c e~ e f d2. r2 r8 g, g g
-   R1 R1 R1 R1 R1 R1 R1 r2 r8 g g g
+   R1 R1 R1 R1 R1 R1 R1 r2 r8 g\( g g
   }
 
   %\mark \default %K
   \tripletFeel 8 {
-  c8 c b c~ c4. d8 c g4 g8~ g g g g
+  c8 c b c~ c4. d8 c g4 g8~ g\) g\( g g
   c c b c d e4 g8~
-  g c,4. r8 c c c
-  a' a g a~ a4 b8 c g ees( d) c~ c4 g'8 g8~
-  g c, c a c d e ees~ ees d r4 r2
+  g c,4.\) r8 c\( c c
+  a' a g a~ a4 b8 c g ees( d) c~ c4\) g'8\( g8~
+  g c, c a c d e ees~ ees d\) r4 r2
 
   %\mark \default %L
   r2 r4 gis8 a~ a8 f e d r2 R1 R1 % e changed to ees?
@@ -116,32 +116,33 @@ melodya = \relative c'' {
   %\mark \default %N
   \tempo 4 = 80
   \tripletFeel 8 {
-  r4 a'8 gis a4 g8 f g f e g~ g c, d e e f r4 aes g8 f d4. e8~ e2
-  r4 f8 e f aes~ \times 2/3 { aes8 g f } g4 g \times 2/3 {ees8( d) c~} c4 e8 f d2. r2 r8 g, g g
+  r4 a'8\( gis a4 g8 f g f e g~ g\) c,\( d e e f\) r4 aes\( g8 f d4. e8~ e2\)
+  r4 f8\( e f aes~ \times 2/3 { aes8 g f } g4 g \times 2/3 {ees8( d) c~} c4\) e8\( f d2.\) r2 r8 g,\( g g
   }
 
   %\mark \default %O
   \tripletFeel 8 {
-  g'8 g e f r4 g g8 d( c) b r b b b g' g e4 f8 g4 c8~ c e,4. r8 e e e
-  c' c b4 c d e r8 c \times 2/3 {g8( f) ees} r8 c' c f, r f16 e fis8 g4 a8 b4. g8~
-  g2
+  g'8 g e f\) r4 g\( g8 d( c) b\) r b\( b b g' g e4 f8 g4 c8~ c e,4.\) r8 e\( e e
+  c' c b4 c d e\) r8 c\( \times 2/3 {g8( f) ees\)} r8 c'\( c f,\) r f16\( e fis8 g4 a8 b4. g8~
+  g2\)
   }
 
   %\mark \default %P
   \tempo 4 = 120
   R1
   \tripletFeel 8 {
-  r2 r4 gis8 a~ a8 f ees d r2 R1 R1 % e change to ees?
-  r2 r4 c'8 b~ b g b c c b a c, c d~ d e f g c g~
-  g8 d d e f e d d~ d c4. r2
+  r2 r4 gis8\( a~ a8 f ees d\) r2 R1 R1 % e change to ees?
+  r2 r4 c'8\( b~ b g b c c b a c, c d~ d\) e\( f g c g~
+  g8\) d\( d e f e d d~ d c4.\) r2
   }
 
   %\mark \default %Q
+  R1
   \tempo 4 = 90
-  R1 r2 r4 a'8 g~ g e g a e d c g a b c d e4 b' a8( g~) g2.
+  r2 r4 a'8\( g~ g e g a e d c g a b\) c\( d e4 b' a8( g~) g2.\)
   \tempo 4 = 120
   \tripletFeel 8 {
-  r8 d d e f g e d~ d c8 r4 r2 R1
+  r8 d\( d e f g e d~ d c8\) r4 r2 R1
   }
   \bar "|."
 }
@@ -153,21 +154,21 @@ melodyb = \relative c'' {
 %  r4 g\f g g g f8 f4 e8 d f
 %  e4 f8 e~ e4 c8 c~ c f,4. r2
   R1 R1 R1 R1
-  r4 g,8^"Freely" e g b d e g4 f8 e~ e c4 e8
-  e4 f8 d~ d d c c~ c d4.~ d4 r
+  r4 g,8^"Freely"\( e g b d e g4 f8 e~ e c4\) e8\(
+  e4 f8 d~ d d c c~ c d4.~ d4\) r
 
   \mark \default %B
   \tempo 4 = 120
   \tripletFeel 8 {
-  r4 g8^"Swing" g b g e g f e f a~ a g f g e4 f2 e8 c f, e f2.
+  r4 g8^"Swing"\( g b g e g f e f a~ a\) g\( f g e4 f2 e8 c f, e f2.\)
   %r4 g8 e g b d e g4 f8 e~ e c4 e8 e f4 c8~ c4 b8 c~ c2 r2
   R1 R1 R1 R1
   }
 
   \mark \default %C
   \tripletFeel 8 {
-  r4 a'8 gis a4 g8 f g f e g~ g c, d e e f r d~ d d c d~ d e4. r2
-  r8 f e f~ f aes g f g g r e~( e d) c e~ e f d2. % r2 r8 g, g g
+  r4 a'8\( gis a4\) g8\( f g f e g~ g\) c,\( d e e f\) r d~\( d d c d~ d e4.\) r2
+  r8 f\( e f~ f aes g f g g r e~( e d) c\) e~\( e f d2.\) % r2 r8 g, g g
   R1
   }
 
@@ -176,42 +177,42 @@ melodyb = \relative c'' {
   %c8 c b c~ c4. d8 c g4 g8~ g g g g
   %c c b c d e4 g8~
   %g c,4. r8 c c c
-  r2 r4 r8 f e d4 d8~ d r r4
-  r4 d8 e g a4 b8~ b g4. r2 %r8 c c c
+  r2 r4 r8 f\( e d4 d8~ d\) r r4
+  r4 d8\( e g a4 b8~ b g4.\) r2 %r8 c c c
   %a' a g a~ a4 b8 c g e d c~ c g'4 g8~
   %g c, c a c d e ees~ ees d r g, g g g c
   R1 R1 R1
-  r4 r8 g, g g g c
+  r4 r8 g,\( g g g c
   }
   \mark \default %E
   \tripletFeel 8 {
   d d c d~ d e4 d8~
-  d b( a) g r g g c
-  d4 r8 c e g4 d'8(~ d c4.) r8 a a b
-  c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
-  d d d e f e d d~
+  d b( a) g\) r g\( g c
+  d4 r8 c e g4 d'8(~ d c4.)\) r8 a\( a b
+  c b c d b4\) a8\( g~ g e g a e d c g a b~ b\) c\( d e g d~
+  d\) d\( d e f e d d~
   \mark \default %F
-  d c4. r2
+  d c4.\) r2
   }
 
   R1 R1 R1
 
   \mark \default %G
   \tripletFeel 8 {
-    r4 r8 g' g g~ g4  g8 f4 f8~ f e8 d f
-    e4 f e4. c8 c4. f,8~ f4 r4
-    r4 g8 e g b d e g4 f8 e~ e c4 e8
-    e8 f4 d8~ d d c c~ c d4.~ d4 r
+    r4 r8 g'\( g g~ g4  g8 f4 f8~ f\) e8\( d f
+    e4 f e4. c8 c4. f,8~ f4\) r4
+    r4 g8\( e g b d e g4 f8 e~ e c4\) e8\(
+    e8 f4 d8~ d d c c~ c d4.~ d4\) r
   }
   \mark \default %H
     R1 R1 R1 R1
-    \tripletFeel 8 { R1 r2 r4 r8 g g4. aes8 f4 d8 e~ e2 r2 }
+    \tripletFeel 8 { R1 r2 r4 r8 g\( g4. aes8 f4 d8 e~ e2\) r2 }
 
 
   \mark \default %J
   \tripletFeel 8 {
-  r4 a8 gis a4 g8 f g f e g~ g c, d e e f r d~ d d( c4) d8 e4. r2
-  r4 f8 e f aes g f g g r e~( e d) c e~ e f d2. % r2 r8 g, g g
+  r4 a8\( gis a4 g8 f g f e g~ g\) c,\( d e e f r d~ d d( c4) d8 e4.\) r2
+  r4 f8\( e f aes g f g g r e~( e d) c\) e~\( e f d2.\) % r2 r8 g, g g
   R1
   }
 
@@ -220,22 +221,22 @@ melodyb = \relative c'' {
   %c8 c b c~ c4. d8 c g4 g8~ g g g g
   %c c b c d e4 g8~
   %g c,4. r8 c c c
-  r2 r4 r8 f e d4 d8~ d r r4
-  r4 d8 e g a4 b8~ b g4. r2 %r8 c c c
+  r2 r4 r8 f\( e d4 d8~ d\) r r4
+  r4 d8\( e g a4 b8~ b g4.\) r2 %r8 c c c
   %a' a g a~ a4 b8 c g e d c~ c g'4 g8~
   %g c, c a c d e ees~ ees d r g, g g g c
-  R1 r2 r4 c4~ c4. c8~ c4. b8~ b4
-  r8 g, g g g c
+  R1 r2 r4 c4~\( c4. c8~ c4. b8~ b4\)
+  r8 g,\( g g g c
   }
   \mark \default %L
   \tripletFeel 8 {
   d d c4 d8 e4.
-  d8 b( a) g r g g c
-  d4 r8 c e g4 d'8(~ d c4.) r8 a a b
-  c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
-  d d d e f e d d~
+  d8 b( a) g\) r g\( g c
+  d4 r8 c e g4 d'8(~ d c4.)\) r8 a\( a b
+  c b c d b4\) a8\( g~ g e g a e d c g a b~ b\) c\( d e g d~
+  d\) d\( d e f e d d~
   \mark \default %M
-  d c4. r2
+  d c4.\) r2
   R1 R1 R1
   R1 R1 R1 R1
   R1 R1
@@ -244,31 +245,31 @@ melodyb = \relative c'' {
 
   \mark \default %N
   \tripletFeel 8 {
-  c'1 b4. bes8~ bes2 a2 c d4. e8~ e2
-  a,2 c e4 c \times 2/3 {g8( f) ees~} ees4 g8 a f2. r2 r8 g, g g
+  c'1\( b4. bes8~ bes2\) a2\( c\) d4.\( e8~ e2\)
+  a,2\( c\) e4\( c \times 2/3 {g8( f) ees~} ees4\) g8\( a f2.\) r2 r8 g,\( g g
   }
 
   \mark \default %O
   \tripletFeel 8 {
-  d'8 d c d r4 e d8 b( a) g r g g g d' d c4 d8 e4 g8~ g c,4. r8 c c c
-  a' a g4 a b c r8 g \times 2/3 {ees8( d) c} r8 g' g c, r c16 a c8 d4 e8 ees4. d8~
-  d2
+  d'8 d c d\) r4 e\( d8 b( a) g\) r g\( g g d' d c4 d8 e4 g8~ g c,4.\) r8 c\( c c
+  a' a g4 a b c\) r8 g\( \times 2/3 {ees8( d) c\)} r8 g'\( g c,\) r c16\( a c8 d4 e8 ees4. d8~
+  d2\)
   }
 
   \mark \default %P
   \tripletFeel 8 {
-  r4 r8 g, g g g c8 d d c4 d8 e4.
-  d8 b( a) g r g g c
-  d4 r8 c e g4 d'8(~ d c4.) r8 a a b
-  c b c d b4 a8 g~ g e g a e d c g a b~ b c d e g d~
-  d d d e f e d d~
+  r4 r8 g,\( g g g c8 d d c4 d8 e4.
+  d8 b( a) g\) r g\( g c
+  d4 r8 c e g4 d'8(~ d c4.)\) r8 a\( a b
+  c b c d b4\) a8\( g~ g e g a e d c g a b~ b\) c\( d e g d~
+  d\) d\( d e f e d d~
   \mark \default %Q
-  d c4. r2
+  d c4.\) r2
   }
 
-  r2 r8 a' a b c b c d b4 r4 R1 R1 R1
+  r2 r8 a'\( a b c b c d b4\) r4 R1 R1 R1
   \tripletFeel 8 {
-  r8 d, d e f g e d~ d c8 r4 r2 R1
+  r8 d,\( d e f g e d~ d c8\) r4 r2 R1
   }
 
   \bar "|."
