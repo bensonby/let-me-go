@@ -952,3 +952,54 @@ sdynamics = {
     }
   }
 }
+
+\book {
+\bookOutputSuffix "no-vocal"
+\score {
+  \new StaffGroup <<
+    \new Staff = "melodyastaff" <<
+      % \set Staff.midiInstrument = #"recorder"
+      \set Staff.midiInstrument = #"electric guitar (clean)"
+      \set Staff.midiMinimumVolume = #0
+      \set Staff.midiMaximumVolume = #0
+      \new Voice = "melody" \melody
+      \context Lyrics = "sopranolyrics" { \lyricsto "melody" { \lyrics-main } }
+    >>
+
+    \new PianoStaff <<
+      \set PianoStaff.instrumentName = #"Primo  "
+      \new Staff = "pupper" \pupper {
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
+      }
+      \new Dynamics = "pdynamics" \pdynamics
+      \new Staff = "plower" \plower {
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
+      }
+    >>
+    \new PianoStaff <<
+      \set PianoStaff.instrumentName = #"Secondo  "
+      \new Staff = "supper" \supper {
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
+      }
+      \new Dynamics = "sdynamics" \sdynamics
+      \new Staff = "slower" \slower {
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
+      }
+    >>
+  >>
+  \midi {
+    \context {
+      \Staff
+      \remove "Staff_performer"
+    }
+    \context {
+      \Voice
+      \consists "Staff_performer"
+    }
+  }
+}
+}
