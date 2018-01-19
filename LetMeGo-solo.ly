@@ -198,20 +198,144 @@ lyrics-main = \lyricmode {
   人 群 是 那 麼 像 羊 群
 }
 
+upper-part-a = \relative c'' {
+  <e g c e>1\arpeggio
+  <f a e'>\arpeggio
+  <g b e>\arpeggio
+  <d a' e'>\arpeggio
+  <d g b e>\arpeggio
+  <e g b c e>\arpeggio
+  <f g a c e>\arpeggio
+  <f a c e>2\arpeggio
+  \tripletFeel 8 { <b, ees>8 g <aes d> g }
+}
+
+lower-part-a = \relative c' {
+  c1 f c f, e a d g2
+  g4 g,
+}
+
+upper-part-b = \relative c' {
+  \tripletFeel 8 {
+    r8 e g <d' e>~ <d e>2
+    r8 c, f <a e'>~ <a e'>2
+    r8 e g <d' e>~ <d e> <aes' b> <g c>4
+  }
+  \tuplet 3/2 4 {e'8 ees d des c b bes a aes} \tripletFeel 8 {g8 ges16 f}
+  \tripletFeel 8 {e8 e, d' d, c' c, b' b, c' <c, dis> e d' e e, g' g,}
+  \tripletFeel 8 {<d f>4. <f aes>8~ q2}
+  r4 <dis b'>8 <e c'> r2
+}
+
+lower-part-b = \relative c {
+  <c b'>1 <f e'> <c d'>
+  << {
+    r4 \tripletFeel 8 {
+      <c' e>8 <d g>~ q2
+      r8 <b d>4. r8 <d e>4.
+    }
+  } \\ {
+    <f, e'>1
+    e2 \tripletFeel 8 {g4. e8}
+  } >>
+  a4 a, b c8 cis d e f g8~ g2 c,8 g' c4 r8 c, \times 2/3 {cis8 d e}
+}
+
+upper-part-c = \relative c'' {
+  << {
+    <a c e>1
+    <g b d>1
+  } \\ {
+    \stemNeutral
+    \tripletFeel 8 {
+      r4 a8 b16 c cis8 d~ d4
+      r4 g,8 a16 ais b8 c~ c4
+    }
+  } >>
+  \tripletFeel 8 {
+    a8 f'4 <aes, f'>8~ q2
+  }
+  \tuplet 3/2 4 {b,8 d e g b e bes, e g bes d g}
+  \tripletFeel 8 {
+    \tuplet 3/2 4 {r8 f,, c'} f4
+    e'8 f16 aes b4
+    \tuplet 3/2 4 {r8 e,,, c'} g'4
+    d'8 e16 fis <ees a>8 e'
+  }
+  \tuplet 3/2 4 { f8 e d b d b bes a f d cis c }
+  \tripletFeel 8 { <b fis>8 c cis <d f,>~ q2 }
+}
+
+lower-part-c = \relative c {
+  \tripletFeel 8 {
+    f8 e'~ e2.
+    e,8 d'~ d <e, bes' des>~ q2
+    d4 fis8 g~ g4 g,
+    c8 g' d'4
+    bes,8 g' c4
+  }
+  a,2
+  \clef treble
+  << {
+    \tripletFeel 8 {
+      f''8 aes16 b d4
+    }
+  } \\ {
+    aes,2
+  } >>
+  \clef bass
+  g,2
+  \clef treble
+  << {
+    \tripletFeel 8 {
+      e''8 fis16 a c4
+    }
+  } \\ {
+    fis,,2
+  } >>
+  << {
+    r8 <e' a>
+  } \\ {
+    \clef bass f,,4
+  } >>
+  r8
+  \clef bass <f' a>8
+  << {
+    r8  <a c d>4.
+  } \\ {
+    bes,2
+  } >>
+  g1
+}
+
+upper = \relative c {
+  \clef treble
+  \key c \major
+  \time 4/4
+  \upper-part-a
+  \upper-part-b
+  \upper-part-c
+}
+
+lower = \relative c {
+  \clef bass
+  \key c \major
+  \time 4/4
+  \lower-part-a
+  \lower-part-b
+  \lower-part-c
+}
+
+dynamics = {
+  s1
+}
+
 pupper = \relative c' {
   \clef treble \key c \major \time 4/4
 
   \override Script #'padding = #2
   \mark \default %A
-  \ottava #1
-  <e' g c e g c e>1\arpeggio\mp
-  <e a c f a e'>\arpeggio
-  <c g' b e g b e>\arpeggio
-  <c f a d a' e'>\arpeggio
-  <d g b d g b e>\arpeggio
-  <c e a e' g b e>\arpeggio
-  <c f a e' g a e'>\arpeggio
-  <d f a e' g bes des e>2~\arpeggio <d f a e' g b d>
+  \upper-part-a
 
   \mark \default %B
   R1 %<c g' b e>2
@@ -991,6 +1115,70 @@ sdynamics = {
       }
     >>
   >>
+  \midi {
+    \context {
+      \Staff
+      \remove "Staff_performer"
+    }
+    \context {
+      \Voice
+      \consists "Staff_performer"
+    }
+  }
+}
+}
+
+\book {
+\bookOutputSuffix "piano-solo"
+\score {
+  \new Score \with {
+%    \override NonMusicalPaperColumn #'page-break-permission = ##f
+  }
+  \new StaffGroup <<
+    \new Staff = "melodyastaff" <<
+      % \set Staff.midiInstrument = #"recorder"
+      \set Staff.midiInstrument = #"electric guitar (clean)"
+      \set Staff.midiMinimumVolume = #0.9
+      \set Staff.midiMaximumVolume = #1
+      \new Voice = "melody" \melody
+      \context Lyrics = "sopranolyrics" { \lyricsto "melody" { \lyrics-main } }
+    >>
+
+    \new PianoStaff <<
+      \set PianoStaff.instrumentName = #"Primo  "
+      \new Staff = "right" \upper {
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
+      }
+      \new Dynamics = "pdynamics" \dynamics
+      \new Staff = "left" \lower {
+        \set Staff.midiMinimumVolume = #0.7
+        \set Staff.midiMaximumVolume = #0.8
+      }
+    >>
+  >>
+  \layout {
+    \context {
+      \type "Engraver_group"
+      \name Dynamics
+      \alias Voice
+      \consists "Output_property_engraver"
+%      \consists "Piano_pedal_engraver"
+      \consists "Script_engraver"
+      \consists "Dynamic_align_engraver"
+      \consists "Text_engraver"
+      \consists "Axis_group_engraver"
+
+      \override DynamicLineSpanner #'Y-offset = #0
+      \override TextScript #'font-size = #2
+      \override TextScript #'font-shape = #'italic
+      \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+    }
+    \context {
+      \PianoStaff
+      \accepts Dynamics
+    }
+  }
   \midi {
     \context {
       \Staff
